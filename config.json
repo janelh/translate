@@ -1,0 +1,20 @@
+{
+  "recording": {
+    "channels": 2,
+    "rate": 44100,
+    "chunk": 1024,
+    "wave_filename": "input.wav"
+  },
+  "sending": {
+    "host": "127.0.0.1",
+    "port": 13000
+  },
+  "receiving": {
+    "host": "",
+    "port": 13000,
+    "buffer": 1024
+  },
+  "text_to_speech": {
+    "mp3_filename": "output.mp3"
+  }
+}
