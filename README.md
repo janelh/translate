@@ -1,17 +1,14 @@
 # Python Voice Translator
 
-The idea for this project appeared following Spanish lessons one evening. My girlfriend was becoming annoyed at me constantly practising Spanish conversation with her. She has no idea what I am saying and she does't care what colour the cat is or how well I can count to ten.
+These scripts translate speech input, and output the translated speech on another computer. The client script records the voice to a WAV file, transcripts the voice to text using Google Speech Translation. The text is then translated with the Googletrans python module, and the translated text is transferred to another computer with speakers. The server script on the other computer converts the received text to mp3, and opens the mp3 file.
 
-To alleviate relationship strain, I dreamt of a future with a raspberry pi, a headset and a speaker duct taped to my shoulder. I would speak Spanish into the headset, the pi would translate and output the translations through the speaker. I have both a headset and a pi, however I have no usb speaker. As an improvisation, I thought instead that my translation could boom out through her computer speakers in the lounge room. Now, she can completely understand when I'm asking what the time is and where the bathroom located.
-
-For some more technical details, there are two python scripts, the client and the server. The client script records the voice to a WAV file, transcripts the voice to text using Google Speech Translation. The text is then translated with the Googletrans python module, and the translated text is transferred to another computer with speakers. The server script on the other computer converts the received text to mp3, and opens the mp3 file.
-
+The idea for this project appeared following Spanish lessons one evening. I imagined a future with a raspberry pi, a headset and a speaker duct taped to my shoulder. I would speak Spanish into the headset, the pi would translate and output the translations through the speaker. I have both a headset and a pi, however I have no usb speaker. As an improvisation, I thought instead that my translation could output from my lounge room computer speakers.
 
 ## Getting Started
 
 Add the client.py and config.json file to the raspberry pi, or computer that will receive your microphone voice input. Add the server.py and config.json to the computer that will receive the translated text and will output the translated audio file. 
 
-### Prerequisites
+## Prerequisites
 
 Supports linux/windows and python3.
 
@@ -25,10 +22,10 @@ You will need to install the following python modules:
 * gTTS
 
 
-### Running
+## Running
 Firstly, run the client.py script on the receiving computer. The receiving computer will wait to receive the translated text. On the sending computer, run the server.py script and indicate how many seconds to voice record. For example, to record for five seconds run the following command:
 
-python client.py 5
+	python client.py 5
 
 When the script starts, you it will indicate when it starts and stops recording.
 
